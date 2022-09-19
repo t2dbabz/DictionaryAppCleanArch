@@ -8,7 +8,7 @@ import com.example.dictionary.feature_dictionary.domain.model.WordInfo
 @Entity
 data class WorldInfoEntity(
     val word: String,
-    val phonetic: String,
+    val phonetic: String?,
     val meaning: List<Meaning>,
     val sourceUrls: List<String>,
     @PrimaryKey val id: Int? = null
@@ -19,7 +19,7 @@ data class WorldInfoEntity(
             word = word,
             phonetic = phonetic,
             meaning = meaning,
-            sourceUrls = sourceUrls,
+           sourceUrls = sourceUrls,
 
         )
     }
