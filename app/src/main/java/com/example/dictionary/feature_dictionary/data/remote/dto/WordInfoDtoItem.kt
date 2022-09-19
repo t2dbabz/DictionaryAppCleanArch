@@ -1,6 +1,7 @@
 package com.example.dictionary.feature_dictionary.data.remote.dto
 
 
+import com.example.dictionary.feature_dictionary.data.local.entity.WorldInfoEntity
 import com.example.dictionary.feature_dictionary.domain.model.WordInfo
 import com.google.gson.annotations.SerializedName
 
@@ -29,6 +30,15 @@ data class WordInfoDtoItem(
             phonetic = phonetic,
             sourceUrls =sourceUrls,
             word = word
+        )
+    }
+
+    fun toWordInfoEntity(): WorldInfoEntity {
+        return  WorldInfoEntity(
+            word = word,
+            phonetic = phonetic,
+            sourceUrls = sourceUrls,
+            meaning = meaningDTOS.map { it.toMeaning() }
         )
     }
 }
