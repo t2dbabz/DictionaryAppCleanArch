@@ -9,7 +9,7 @@ data class WordInfo(
 
     val meaning: List<Meaning>,
 
-    val phonetic: String,
+    val phonetic: String?,
 
     val sourceUrls: List<String>,
 
