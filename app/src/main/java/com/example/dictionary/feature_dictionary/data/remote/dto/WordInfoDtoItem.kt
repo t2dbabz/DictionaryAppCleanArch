@@ -25,7 +25,6 @@ data class WordInfoDtoItem(
 ) {
     fun toWordInfo(): WordInfo {
         return WordInfo(
-            license = license,
             meaning = meaningDTOS.map { it.toMeaning() },
             phonetic = phonetic,
             sourceUrls =sourceUrls,

@@ -7,8 +7,6 @@ import com.google.gson.annotations.SerializedName
 
 data class WordInfo(
 
-    val license: License,
-
     val meaning: List<Meaning>,
 
     val phonetic: String,
